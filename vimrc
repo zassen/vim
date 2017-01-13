@@ -74,6 +74,7 @@ set number
 set showcmd
 set incsearch
 set hlsearch
+set cursorline
 
 syntax on
 
