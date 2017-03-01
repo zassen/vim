@@ -122,7 +122,7 @@ let g:airline_detect_paste=1
 let g:airline#extensions#tabline#enabled = 1
 
 " Use the solarized theme for the Airline status bar
-let g:airline_theme='solarized'
+let g:airline_theme='base16'
 "let g:airline_theme='dark'
 
 
@@ -139,7 +139,9 @@ let g:airline_symbols.linenr = ''
 
 " ----- jistr/vim-nerdtree-tabs -----
 " Open/close NERDTree Tabs with \t
-nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
+let mapleader=","
+"nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
+nmap <silent> <F1>t :NERDTreeTabsToggle<CR>
 " To have NERDTree always open on startup
 let g:nerdtree_tabs_open_on_console_startup = 1
 
@@ -165,7 +167,8 @@ let g:easytags_suppress_ctags_warning = 1
 
 " ----- majutsushi/tagbar settings -----
 " Open/close tagbar with \b
-nmap <silent> <leader>b :TagbarToggle<CR>
+"nmap <silent> <leader>b :TagbarToggle<CR>
+nmap <silent> <F1>b :TagbarToggle<CR>
 " Uncomment to open tagbar automatically whenever possible
 "autocmd BufEnter * nested :call tagbar#autoopen(0)
 
@@ -187,5 +190,6 @@ augroup END
 
 " ----- jez/vim-superman settings -----
 " better man page support
-noremap K :SuperMan <cword><CR>
-
+"noremap K :SuperMan <cword><CR>
+nmap  <F1>n :bn<CR>
+nmap  <F1>p :bp<CR>
