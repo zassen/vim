@@ -19,6 +19,8 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'tomasr/molokai'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'google/vim-colorscheme-primary'
+"Plugin 'tomasr/molokai'
 
 " ----- Vim as a programmer's text editor -----------------------------
 Plugin 'scrooloose/nerdtree'
@@ -76,6 +78,7 @@ set incsearch
 set hlsearch
 set cursorline
 
+syntax enable
 syntax on
 
 set mouse=a
@@ -90,12 +93,19 @@ hi clear SignColumn
 " Toggle this to "light" for light colorscheme
 set background=dark
 "set background=light
+"hi Normal ctermfg=252 ctermbg=none
+"set termguicolors
 
 " Uncomment the next line if your terminal is not configured for solarized
 "let g:solarized_termcolors=256
+set t_Co=256
+let g:rehash256 = 1
 
 " Set the colorscheme
 "colorscheme solarized
+"colorscheme primary
+colorscheme molokai 
+let g:molokai_original = 1
 
 
 " ----- bling/vim-airline settings -----
@@ -191,5 +201,5 @@ augroup END
 " ----- jez/vim-superman settings -----
 " better man page support
 "noremap K :SuperMan <cword><CR>
-nmap  <F1>n :bn<CR>
-nmap  <F1>p :bp<CR>
+nmap  <F4>n :bn<CR>
+nmap  <F4>p :bp<CR>
